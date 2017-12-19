@@ -1,4 +1,4 @@
-package cn.hydralisk.hmsmock.sample;
+package cn.hydralisk.hmsmock.test;
 
 import cn.hydralisk.hmsmock.constants.HmsConstants;
 import cn.hydralisk.hmsmock.util.Ansi919MacCalculator;

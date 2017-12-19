@@ -1,4 +1,4 @@
-package cn.hydralisk.hmsmock.sample;
+package cn.hydralisk.hmsmock.test;
 
 import com.orca.hmsmock.hms.util.CommonMacCalculator;
 import com.orca.hmsmock.hms.util.CommonUtils;

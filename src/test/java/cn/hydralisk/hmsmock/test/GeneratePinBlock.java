@@ -1,4 +1,4 @@
-package cn.hydralisk.hmsmock.sample;
+package cn.hydralisk.hmsmock.test;
 
 import com.orca.hmsmock.hms.util.CommonUtils;
 import com.orca.hmsmock.hms.util.PinBlockGenerator;
