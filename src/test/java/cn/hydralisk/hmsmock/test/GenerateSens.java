@@ -1,8 +1,8 @@
 package cn.hydralisk.hmsmock.test;
 
-import com.orca.hmsmock.hms.util.CommonMacCalculator;
-import com.orca.hmsmock.hms.util.CommonUtils;
-import com.orca.hmsmock.hms.util.ThreeDesUtils;
+import cn.hydralisk.hmsmock.util.CommonMacCalculator;
+import cn.hydralisk.hmsmock.util.CommonUtils;
+import cn.hydralisk.hmsmock.util.ThreeDesUtils;
 import org.bouncycastle.util.encoders.Base64;
 
 /**
