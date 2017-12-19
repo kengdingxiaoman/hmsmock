@@ -91,12 +91,6 @@ public class CommandHandler implements Runnable {
     private byte[] readRequestData(InputStream socketIn) throws IOException {
         byte[] maxBuffer = new byte[HmsConstants.MAX_TRANSFER_DATA_LENGTH];
         int readedLength = socketIn.read(maxBuffer, 0, HmsConstants.MAX_TRANSFER_DATA_LENGTH);
-        /*
-         * while (readLength > 0) { readedLength += readLength; readLength =
-         * socketIn.read(maxBuffer, readedLength,
-         * HmsConstants.MAX_TRANSFER_DATA_LENGTH - readedLength);
-         * System.out.println("readLength = " + readLength); }
-         */
 
         if (noRequestData(readedLength)) {
             return null;
