@@ -1,0 +1,36 @@
+### Usual ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+auto-accounting.log
+*.log
+
+### Gradle ###
+.gradle
+gradle
+gradlew
+gradlew.bat
+
+### STS ###
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+/.apt_generated/
+
+### Others ###
+out
