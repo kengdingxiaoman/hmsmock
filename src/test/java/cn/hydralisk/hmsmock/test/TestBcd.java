@@ -14,6 +14,6 @@ public class TestBcd {
 
         byte[] b = testStr.getBytes();
 
-        System.out.println(CommonUtils.byte2hex(b));
+        System.out.println(CommonUtils.byte2hex(b)); //print: 3032203030
     }
 }
