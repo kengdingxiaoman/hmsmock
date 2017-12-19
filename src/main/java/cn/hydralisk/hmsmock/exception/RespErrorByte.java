@@ -50,11 +50,6 @@ public enum RespErrorByte {
     ABSENCE_OF_PIN_FORMAT((byte) 0x44, "缺少PinFormat"),
     ABSENCE_OF_PIN_LENGTH((byte) 0x45, "缺少Pin长度"),
     ABSENCE_OF_PIN((byte) 0x46, "缺少Pin"),
-    UNSUPPORT_RSA_ENCRYPT((byte) 0x47, "不符合RSA的加密方式"),
-    ABSENCE_OF_RSA_CERT_PATH((byte) 0x48, "RSA证书路径不存在"),
-    ABSENCE_OF_RSA_MODEL_EXPONENT((byte) 0x49, "模和指数不存在"),
-    ABSENCE_OF_RSA_TRANSFORMATION((byte) 0x50, "算法模式未设定"),
-    ABSENCE_OF_RSA_BANK_TYPE((byte)0x51,"银行类型不符合"), 
     
     KEY_LENGTH_EXCEED_LIMIT((byte) 0x97, "密钥长度超出限制"),
     REQUEST_IP_NOT_IN_WHITE_LIST((byte) 0x98, "请求IP不在白名单中"),
