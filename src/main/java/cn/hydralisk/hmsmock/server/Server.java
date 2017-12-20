@@ -25,7 +25,7 @@ public class Server {
 		executorService = Executors.newFixedThreadPool(Runtime.getRuntime()
 				.availableProcessors() * HmsConstants.THREAD_POOL_SIZE);
 
-		CommonUtils.println("HmsMock启动!");
+		CommonUtils.println("Hydralisk HmsMock启动!");
 	}
 
 	public void service() {
