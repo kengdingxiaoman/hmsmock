@@ -2,6 +2,7 @@ package cn.hydralisk.hmsmock.util;
 
 import cn.hydralisk.hmsmock.constants.CommonConstants;
 import cn.hydralisk.hmsmock.constants.HmsConstants;
+import cn.hydralisk.hmsmock.constants.enums.KeyType;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -212,6 +213,39 @@ public abstract class CommonUtils {
         byte[] localMasterKey = ThreeDesUtils.decryptKey(
             hex2byte(HmsConstants.LOCAL_MASTER_KEY_KEY), hex2byte(LOCAL_MASTER_KEY_CIPHERTEXT));
         return byte2hex(localMasterKey);
+    }
+
+    /**
+     * 生成变种本地主密钥，变种指令都使用变种本地主密钥
+     * @param keyType
+     * @return
+     */
+    public static String generateXorLocalMasterKey(KeyType keyType) {
+        byte[] localMasterKey = ThreeDesUtils.decryptKey(
+                hex2byte(HmsConstants.LOCAL_MASTER_KEY_KEY), hex2byte(LOCAL_MASTER_KEY_CIPHERTEXT));
+
+        byte[] xorLocalMasterKey = xorArrayFirstByte(keyType.getXorByte(), localMasterKey);
+
+        return byte2hex(xorLocalMasterKey);
+    }
+
+    /**
+     * 只异或数组的第一个字节
+     * @param a
+     * @param b
+     * @return
+     */
+    private static byte[] xorArrayFirstByte(byte a, byte[] b) {
+        int length = b.length;
+        byte[] result = new byte[length];
+        for (int index = 0; index < length; index++) {
+            if (index == 0) {
+                result[index] = (byte) (a ^ b[index]);
+            } else {
+                result[index] = b[index];
+            }
+        }
+        return result;
     }
 
     public static byte[] byte2Double(byte[] b) {
